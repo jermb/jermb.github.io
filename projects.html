@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Final Project</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="books.html">Books</a></li>
+            </ul>
+        </nav>
+        <h1>Python Turtle Project</h1>
+        <div class="main">
+            <div>
+                <h2>Output</h2>
+                <p>This is an image I created using the Python Turtle Library. It is meant to be a Pokeball.</p>
+                <img src="img/pokeball.png" alt="Pokeball">
+            </div>
+            <div>
+                <h2>Python Code</h2>
+                <pre class="code">
+                    <code>
+                        <!-- All white space presevered from here -->
+<span class="def">def</span> <span class="function">halfCircle</span>(color):
+    turtle.<span class="turtle">color</span>('black', color)
+    turtle.<span class="turtle">begin_fill</span>()
+    turtle.<span class="turtle">forward</span>(200)
+    turtle.<span class="turtle">right</span>(90)
+    turtle.<span class="turtle">circle</span>(-200, 180)
+    turtle.<span class="turtle">right</span>(90)
+    turtle.<span class="turtle">forward</span>(200)
+    turtle.<span class="turtle">end_fill</span>()
+
+<span class="def">def</span> <span class="function">circle</span>(color, radius):
+    turtle.<span class="turtle">color</span>('black', color)
+    turtle.<span class="turtle">forward</span>(radius)
+    turtle.<span class="turtle">right</span>(90)
+    turtle.<span class="turtle">begin_fill</span>()
+    turtle.<span class="turtle">circle</span>(0-radius)
+    turtle.<span class="turtle">end_fill</span>()
+
+<span class="comment">#Basic Settings</span> 
+turtle.<span class="turtle">speed</span>(0)
+turtle.<span class="turtle">pensize</span>(10)
+
+<span class="comment">#Creates top half</span>
+turtle.<span class="turtle">left</span>(180)
+<span class="function">halfCircle</span>('red')
+
+<span class="comment">#Creates bottom half</span>
+turtle.<span class="turtle">right</span>(180)
+<span class="function">halfCircle</span>('white')
+
+<span class="comment">#Creates middle black circle</span>
+<span class="function">circle</span>('black', 50)
+
+<span class="comment">#Draws middle line</span>
+turtle.<span class="turtle">pensize</span>(20)
+turtle.<span class="turtle">left</span>(90)
+turtle.<span class="turtle">forward</span>(140)
+turtle.<span class="turtle">backward</span>(380)
+turtle.<span class="turtle">forward</span>(190)
+turtle.<span class="turtle">pensize</span>(1)
+
+<span class="comment">#Draws middle white circle</span>
+<span class="function">circle</span>('white', 35)
+
+<span class="comment">#Hides Turtle</span>
+turtle.<span class="turtle">hideturtle</span>()
+                        <!-- to here -->
+                    </code>
+                </pre>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
