@@ -151,3 +151,7 @@ thead tr:nth-child(1), tbody tr:nth-child(even) {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+html { 
+    margin-left: calc(100vw - 100%); /* Fixes content jumping when moving from non-scrolling page to scrolling page */
+}
