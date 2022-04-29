@@ -1,7 +1,16 @@
 /* General Styling */
-body {
+body, .container {
     background-color: #2e8b57;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 60%;
+    margin: 0 20%;
+    font-size: 1.3rem;
 }
 
 a, a:visited {
@@ -10,10 +19,6 @@ a, a:visited {
 }
 a:hover {
     color: #D4AA7D;
-}
-
-nav ul li {
-    padding: 10px 10px;
 }
 
 h1, h2 {
@@ -33,29 +38,66 @@ img {
     margin-bottom: 20px;
 }
 
-.main {
+.row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 60;
-    margin: 0 20%;
-    font-size: 1.3rem;
 }
 
-.main div {
-    padding: 0 10px;
-    margin: 0 10px;
+.row div {
+    padding: 0;
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 /* Nav Styling */
+nav {
+    margin-bottom: 25px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
 nav ul {
     list-style-type: none;
+    font-size: 1.3rem;
     margin: 0;
-    padding: 15px 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    background: #D4AA7D;
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    
+}
+
+nav ul li {
+    margin: 0;
+    padding: 20px 20px;
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    color: #fff;
+}
+
+nav ul li:first-child {
+    padding: 20px 25px 20px 95px;
+}
+
+nav ul li:last-child {
+    padding: 20px 95px 20px 25px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #fff;
+}
+
+nav ul li:hover {
+    background: #82afff;
+    color: white;
+}
+
+.active:link, .active:visited {
+    text-decoration: underline #82afff 3px;
+}
+.active:hover, nav ul li:hover .active {
+    text-decoration-color: #D4AA7D;
 }
 
 /* Code CSS */
@@ -93,4 +135,19 @@ tr, th, td {
 thead tr:nth-child(1), tbody tr:nth-child(even) {
     background: #5e806d;
     box-shadow: 0px 2px 4px 0px #2d3d34;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #5e806d; 
+}
+::-webkit-scrollbar-thumb {
+    background: #2d3d34; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
